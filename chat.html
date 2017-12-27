@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Consume restService</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- import vuejs -->
+    <script src="js/vue.js"></script>
+
+    <!-- import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- import socket.io -->
+    <script src="js/socket.io.js"></script>
+     
+
+</head>
+
+<body>
+    <div id="vue-app">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-5">
+                    <form class="form-signin" >
+                        <h2 class="form-signin-heading">Users</h2>
+        
+                        <input type="type" v-model="UserSender" class="form-control" placeholder="envia">
+                        <input type="type" v-model="UserReceived" class="form-control" placeholder="recibe">
+        
+                        <a class="btn btn-lg btn-primary btn-block" @enviarUsuarios="enviar">Send</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-5">
+                    <form class="form-signin" >
+                        <h2 class="form-signin-heading">ChatRoom</h2>
+                        
+                        <textarea rows="15" cols="70" id="myTextarea"></textarea>
+                        <input type="type" v-model="textSender" class="form-control">
+                        
+                        <a class="btn btn-lg btn-primary btn-block" @click="enviar">Send</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/pages/chat.js"></script>
+</body>
+
+</html>
